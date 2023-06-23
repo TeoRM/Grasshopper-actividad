@@ -1,0 +1,374 @@
+/* mobil 579 992 */
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* hamburguesa */
+
+.main-header {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 0 0.4rem;
+}
+
+.header {
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    margin-left: -100%;
+    transition: all 0.2s linear;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 100;
+}
+
+.botonVerde:hover {
+    background-color: #002C43;
+    text-decoration: underline;
+}
+
+.main-nav.show {
+    margin-left: 0;
+}
+
+.nav-links {
+    background-color: rgb(250, 250, 250);
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 100%;
+    align-items: center;
+}
+
+.link-item {
+    margin-top: 2rem;
+    color: rgb(158, 158, 158);
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+}
+
+.link-item:hover {
+    text-decoration: overline;
+    color: #3DC73F;
+}
+
+
+.button-menu {
+    z-index: 200;
+    width: 40px;
+    height: 40px;
+    border: none;
+    display: flex;
+    background: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.button-menu span {
+    width: 37px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #3DC73F;
+    border-radius: 3px;
+    transform-origin: 4px 0px;
+    transition: all 0.2s linear;
+}
+
+.button-menu.close span {
+    opacity: 1;
+    transform: rotate(45deg) translate(0px, 0px);
+    background: #ffffff;
+}
+
+.button-menu.close span:nth-child(2) {
+    transform: rotate(-45deg) translate(-8px, 5px);
+}
+
+.button-menu.close span:nth-child(3) {
+    display: none;
+}
+
+@media screen and (min-width: 1000px) {
+    .main-header {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .color {
+        margin-left: 200px;
+        position: absolute;
+        right: 10px;
+    }
+
+    .color:hover {
+        text-decoration: line-through;
+    }
+
+    .logo {
+        margin-right: 20px;
+    }
+
+    .button-menu {
+        display: none;
+    }
+
+    .main-logo {
+        flex-basis: 30%;
+    }
+
+    .main-nav {
+        position: static;
+        margin-left: 0;
+        flex-basis: 70%;
+        height: 100%;
+    }
+
+    .nav-links {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        background: white;
+    }
+
+    .link-item {
+        display: inline-block;
+        margin-top: 0;
+        margin-right: 2rem;
+    }
+}
+
+.color {
+    background-color: #3DC73F;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.now {
+    background-color: #3DC73F;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+}
+
+/* cierra hamburguesa */
+
+.imgFondo img {
+    width: 100%;
+    opacity: 50%;
+    z-index: 1;
+}
+
+.mensaje {
+    position: absolute;
+    z-index: 2;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    margin-top: 170px;
+    color: #055987;
+}
+
+.mensaje h1 {
+    width: 400px;
+}
+
+.mensaje p {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.botonVerde {
+    margin-top: 20px;
+    border: none;
+    padding: 15px;
+    border-radius: 50px;
+    background-color: #45C14E;
+    color: #FCFCFC;
+    width: 270px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* section */
+
+.section1 {
+    margin-top: -10px;
+    background-color: #DFF8EB;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    border-radius: 0 0 50px 50px;
+
+}
+
+.section1 div h2 {
+    font-size: 35px;
+    color: #002C43;
+    margin-bottom: 50px;
+}
+
+.carta {
+    width: 300px;
+    margin: 20px;
+    color: #002C43;
+    font-size: 20px;
+}
+
+.carta img {
+    margin: 30px;
+}
+
+.cartas {
+    background-color: #DFF8EB;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section2 {
+    display: flex;
+    flex-direction: column;
+    background-color: #FCFCFC;
+    text-align: center;
+    margin: 70px 0;
+}
+
+
+.selfie {
+    width: 100px;
+    height: 96px;
+    border-radius: 50%;
+    filter: grayscale(100%);
+}
+
+.section2 div .subtitulo {
+    font-size: 35px;
+    color: #002C43;
+    margin-bottom: 50px;
+}
+
+.comentarios h2 {
+    margin-top: 30px;
+}
+
+.comentarios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.usuario {
+    box-shadow: 30px -10px #45C14E;
+    background-color: #c4c4c450;
+    color: #002C43;
+    padding: 10px;
+    margin: 30px;
+    text-align: left;
+    display: flex;
+    width: 300px;
+    border-radius: 40px;
+}
+
+.usuario div {
+    margin: 10px;
+}
+
+.comillas {
+    width: 30px;
+}
+
+.padreSection {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media (min-width: 1000px) {
+    .color {
+        color: rgb(158, 158, 158);
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+    .cartas {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .comentarios {
+        width: 500px;
+        flex-direction: row;
+        margin-right: 20px;
+        justify-content: center
+    }
+
+    .section1 {
+        width: 1143px;
+        margin-top: -67px;
+    }
+
+    .imgFondo img {
+        opacity: 100%;
+    }
+
+    .mensaje {
+        text-align: left;
+        left: 10vh;
+        top: 200px;
+    }
+
+    .section1 {
+        margin-top: -0.3%;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .comentarios {
+        width: 1200px;
+    }
+
+    .mensaje {
+        left: 20vh;
+    }
+}
+
+@media (min-width: 1500px) {
+    .mensaje {
+        left: 30vh;
+    }
+}
+
+@media (min-width: 1800px) {
+    .mensaje {
+        left: 45vh;
+    }
+}
